@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "Less/Global/Global.css",
+    "inputFile": "Less/Global/Global.less"
+  },
+  {
+    "outputFile": "Less/Global/GlobalVariables.css",
+    "inputFile": "Less/Global/GlobalVariables.less"
+  }
+]

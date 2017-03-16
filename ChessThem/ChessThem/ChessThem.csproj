@@ -220,8 +220,26 @@
     <Content Include="Images\ChessImages\Pieces\WhitePawn.png" />
     <Content Include="Images\ChessImages\Pieces\WhiteQueen.png" />
     <Content Include="Images\ChessImages\Pieces\WhiteRook.png" />
+    <Content Include="Less\Global\Global.css">
+      <DependentUpon>Global.less</DependentUpon>
+    </Content>
+    <Content Include="Less\Global\Global.min.css">
+      <DependentUpon>Global.css</DependentUpon>
+    </Content>
+    <Content Include="Less\Global\GlobalVariables.css">
+      <DependentUpon>GlobalVariables.less</DependentUpon>
+    </Content>
+    <Content Include="Less\Global\GlobalVariables.min.css">
+      <DependentUpon>GlobalVariables.css</DependentUpon>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Less\Global\GlobalVariables.less" />
+    <Content Include="Less\Global\Global.less" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -255,9 +273,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -278,6 +293,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

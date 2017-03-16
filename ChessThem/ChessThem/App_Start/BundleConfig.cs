@@ -15,6 +15,7 @@ namespace ChessThem
 			bundles.Add(new ScriptBundle("~/scripts/bootstrap").Include("~/Scripts/bootstrap.js", "~/Scripts/respond.js"));
 
 			bundles.Add(new StyleBundle("~/styles/bootstrap").Include("~/Content/bootstrap.css"));
+			bundles.Add(new StyleBundle("~/styles/global").IncludeDirectory("~/Less/Global", "*.css", true));
 		}
 	}
 }
