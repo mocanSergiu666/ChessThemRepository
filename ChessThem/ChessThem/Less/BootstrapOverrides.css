@@ -1,0 +1,61 @@
+﻿.nav-pills > li {
+  float: none;
+  margin-bottom: 4px;
+}
+.nav-pills > li.active > a {
+  background-color: #337ab7;
+}
+.nav-pills > li.active > a:hover {
+  background-color: #0d102d;
+}
+.nav-pills > li > a {
+  border-radius: 0px;
+  background-color: black;
+  color: white;
+  border: solid 1px white;
+  text-align: center;
+}
+.nav-pills > li + li {
+  margin-left: 0px;
+}
+.nav > li > a:hover {
+  background-color: #0d102d;
+}
+.nav > li > a:focus {
+  background-color: black;
+}
+.container .jumbotron,
+.container-fluid .jumbotron {
+  border-radius: 0px;
+}
+.jumbotron {
+  background-color: black;
+}
+.form-control {
+  border-radius: 0px;
+  margin: 4px;
+}
+.radio label,
+.checkbox label {
+  color: white;
+}
+.btn {
+  border-radius: 0px;
+  border: solid 1px black;
+  background-color: white;
+}
+.modal-content {
+  background-color: #801a1a;
+  border: 1px solid white;
+  border-radius: 0px;
+}
+button.close {
+  margin: 0px 2px;
+  text-shadow: none;
+  opacity: 1;
+  color: white;
+}
+button.close:hover,
+button.close:focus {
+  color: black;
+}

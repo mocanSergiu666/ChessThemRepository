@@ -9,5 +9,10 @@ namespace ChessThem.Controllers
         {
             return View();
         }
+
+		public PartialViewResult ShowConnectionFailPopup()
+		{
+			return PartialView();
+		}
     }
 }

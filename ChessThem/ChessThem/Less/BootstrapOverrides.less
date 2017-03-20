@@ -1,0 +1,81 @@
+﻿@import "GlobalVariables.less";
+
+.nav-pills > li {
+	float: none;
+	margin-bottom: 4px;
+
+	&.active {
+		> a {
+			background-color: @global-background-color-4;
+
+			&:hover {
+				background-color: @global-background-color-3;
+			}
+		}
+	}
+
+	> a {
+		border-radius: 0px;
+		background-color: @global-background-color-1;
+		color: @global-color-1;
+		border: solid @global-border-size @global-color-1;
+		text-align: center;
+	}
+
+	+ li {
+		margin-left: 0px;
+	}
+}
+
+.nav > li > a {
+	&:hover {
+		background-color: @global-background-color-3;
+	}
+
+	&:focus {
+		background-color: @global-background-color-1;
+	}
+}
+
+.container .jumbotron,
+.container-fluid .jumbotron {
+	border-radius: 0px;
+}
+
+.jumbotron {
+	background-color: @global-background-color-1;
+}
+
+.form-control {
+	border-radius: 0px;
+	margin: 4px;
+}
+
+.radio label,
+.checkbox label {
+	color: @global-color-1;
+}
+
+.btn {
+	border-radius: 0px;
+	border: solid @global-border-size @global-color-2;
+	background-color: @global-background-color-2;
+}
+
+.modal-content {
+	background-color: @global-background-color-5;
+	border: @global-border-size solid @global-color-1;
+	border-radius: 0px;
+}
+
+button.close {
+	margin: 0px 2px;
+	text-shadow: none;
+	opacity: 1;
+	color: @global-color-1;
+
+	&:hover,
+	&:focus {
+		color: @global-color-2;
+	}
+}

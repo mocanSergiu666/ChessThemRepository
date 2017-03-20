@@ -1,9 +1,61 @@
 ﻿@{
-    ViewBag.Title = "Home";
+	ViewBag.Title = "Chess";
 }
-
-<div class="jumbotron">
-	<h1>Wellcome!</h1>
-	<p>...</p>
-	<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+<div class="row">
+	<div id="home-menu" class="jumbotron col-xs-12">
+		<h1 id="greeting">Wellcome 2 Chess 4 2!</h1>
+		<div class="row">
+			<div class="col-xs-4">
+				<ul class="nav nav-pills center-block" role="tablist">
+					<li role="presentation" class="active"><a href="#go-anonymous" aria-controls="go-anonymous" role="tab" data-toggle="pill">Go anonymous</a></li>
+					<li role="presentation"><a href="#log-in" aria-controls="log-in" role="tab" data-toggle="pill">Log in</a></li>
+					<li role="presentation"><a href="#sign-up" aria-controls="sign-up" role="tab" data-toggle="pill">Sign up</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-8">
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane fade active in" id="go-anonymous">
+						<form class="form-inline">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Username...">
+							</div>
+							<button class="btn form-control connect">Connect!</button>
+						</form>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="log-in">
+						<form class="form-inline">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Username...">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" placeholder="Password...">
+							</div>
+							<div class="form-group">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox"> Remember me!
+									</label>
+								</div>
+							</div>
+							<button class="btn form-control connect">Connect!</button>
+						</form>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="sign-up">
+						<form class="form-inline">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Username...">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" placeholder="Password...">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" placeholder="Password confirmation...">
+							</div>
+							<button class="btn form-control connect">Connect!</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

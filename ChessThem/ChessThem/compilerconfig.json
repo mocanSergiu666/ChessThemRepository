@@ -6,5 +6,21 @@
   {
     "outputFile": "Less/Global/GlobalVariables.css",
     "inputFile": "Less/Global/GlobalVariables.less"
+  },
+  {
+    "outputFile": "Less/Global/Site.css",
+    "inputFile": "Less/Global/Site.less"
+  },
+  {
+    "outputFile": "Less/BootstrapOverrides.css",
+    "inputFile": "Less/BootstrapOverrides.less"
+  },
+  {
+    "outputFile": "Less/Site.css",
+    "inputFile": "Less/Site.less"
+  },
+  {
+    "outputFile": "Less/Global.css",
+    "inputFile": "Less/Global.less"
   }
 ]

@@ -5,19 +5,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>@ViewBag.Title</title>
 	@Styles.Render("~/styles/bootstrap")
-	@Styles.Render("~/styles/global")
+	@Styles.Render("~/styles/custom")
 	@Scripts.Render("~/scripts/modernizr")
 </head>
-<body>
-	<div class="container">
+<body class="white-on-black">
+	<div class="site-body container-fluid">
 		@RenderBody()
 	</div>
 	<footer id="site-footer">
-		<hr />
-		<p>&copy; @DateTime.Now.Year - Chess Them</p>
+		<div class="text-center">&copy; @DateTime.Now.Year - Chess 4 2</div>
 	</footer>
+	@Html.Partial("ShowConnectionFailPopup")
+
 	@Scripts.Render("~/scripts/jquery")
 	@Scripts.Render("~/scripts/bootstrap")
+	@Scripts.Render("~/scripts/signalr")
+	<script src="~/signalr/hubs"></script>
+	@Scripts.Render("~/scripts/custom")
 	@RenderSection("scripts", required: false)
 </body>
 </html>

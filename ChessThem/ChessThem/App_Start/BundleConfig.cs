@@ -13,9 +13,11 @@ namespace ChessThem
 			// ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
 			bundles.Add(new ScriptBundle("~/scripts/modernizr").Include("~/Scripts/modernizr-*"));
 			bundles.Add(new ScriptBundle("~/scripts/bootstrap").Include("~/Scripts/bootstrap.js", "~/Scripts/respond.js"));
+			bundles.Add(new ScriptBundle("~/scripts/signalr").Include("~/Scripts/jquery.signalR-*"));
+			bundles.Add(new ScriptBundle("~/scripts/custom").IncludeDirectory("~/Javascript", "*.js", true));
 
 			bundles.Add(new StyleBundle("~/styles/bootstrap").Include("~/Content/bootstrap.css"));
-			bundles.Add(new StyleBundle("~/styles/global").IncludeDirectory("~/Less/Global", "*.css", true));
+			bundles.Add(new StyleBundle("~/styles/custom").IncludeDirectory("~/Less", "*.css", true));
 		}
 	}
 }

@@ -186,6 +186,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Hubs\ChessHub.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -220,26 +221,42 @@
     <Content Include="Images\ChessImages\Pieces\WhitePawn.png" />
     <Content Include="Images\ChessImages\Pieces\WhiteQueen.png" />
     <Content Include="Images\ChessImages\Pieces\WhiteRook.png" />
-    <Content Include="Less\Global\Global.css">
+    <Content Include="Javascript\Global.js" />
+    <Content Include="Javascript\SignalROperations.js" />
+    <Content Include="Less\BootstrapOverrides.css">
+      <DependentUpon>BootstrapOverrides.less</DependentUpon>
+    </Content>
+    <Content Include="Less\BootstrapOverrides.min.css">
+      <DependentUpon>BootstrapOverrides.css</DependentUpon>
+    </Content>
+    <Content Include="Less\Global.css">
       <DependentUpon>Global.less</DependentUpon>
     </Content>
-    <Content Include="Less\Global\Global.min.css">
+    <Content Include="Less\Global.min.css">
       <DependentUpon>Global.css</DependentUpon>
     </Content>
-    <Content Include="Less\Global\GlobalVariables.css">
+    <Content Include="Less\GlobalVariables.css">
       <DependentUpon>GlobalVariables.less</DependentUpon>
     </Content>
-    <Content Include="Less\Global\GlobalVariables.min.css">
+    <Content Include="Less\GlobalVariables.min.css">
       <DependentUpon>GlobalVariables.css</DependentUpon>
+    </Content>
+    <Content Include="Less\Site.css">
+      <DependentUpon>Site.less</DependentUpon>
+    </Content>
+    <Content Include="Less\Site.min.css">
+      <DependentUpon>Site.css</DependentUpon>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Less\Global\GlobalVariables.less" />
-    <Content Include="Less\Global\Global.less" />
+    <Content Include="Less\GlobalVariables.less" />
+    <Content Include="Less\Global.less" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="Less\Site.less" />
+    <Content Include="Less\BootstrapOverrides.less" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -254,8 +271,6 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\knockout-3.4.2.debug.js" />
-    <Content Include="Scripts\knockout-3.4.2.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
@@ -294,6 +309,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\ShowConnectionFailPopup.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
