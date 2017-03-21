@@ -12,3 +12,25 @@
 #connection-fail-message {
   text-align: center;
 }
+#chess-board-container {
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+#chess-board-container .chess-board {
+  width: 100%;
+  height: 100%;
+}
+#chess-board-container .chess-piece-container {
+  width: 12.5%;
+  height: 12.5%;
+  position: absolute;
+}
+#chess-board-container .chess-piece-container.movable:hover {
+  border: solid #0d102d 1px;
+  cursor: pointer;
+}
+#chess-board-container .chess-piece-container .chess-piece {
+  width: 100%;
+  height: 100%;
+}

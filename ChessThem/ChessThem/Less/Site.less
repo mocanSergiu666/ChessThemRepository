@@ -18,3 +18,31 @@
 #connection-fail-message {
 	text-align: center;
 }
+
+
+#chess-board-container {
+	width: 500px;
+	height: 500px;
+	position: relative;
+
+	.chess-board {
+		width: 100%;
+		height: 100%;
+	}
+
+	.chess-piece-container {
+		width: 12.5%;
+		height: 12.5%;
+		position: absolute;
+
+		&.movable:hover {
+			border: solid @global-background-color-3 @global-border-size;
+			cursor: pointer;
+		}
+
+		.chess-piece {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

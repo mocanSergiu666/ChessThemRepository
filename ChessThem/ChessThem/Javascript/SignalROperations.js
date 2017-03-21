@@ -15,7 +15,8 @@ function onHubDisconnected() {
 }
 
 function onHubStartDone() {
-	
+	var url = "/Home/Connect/";
+	window.location.href = window.location.origin + url;
 }
 
 function onHubStartFail() {
