@@ -19,28 +19,103 @@
 	text-align: center;
 }
 
-#chess-board-container {
-	width: 500px;
-	height: 500px;
-	position: relative;
+.chess-container {
+	width: 600px;
+	height: 600px;
 
-	.chess-board {
+	.info {
 		width: 100%;
-		height: 100%;
+		height: 5%;
+		padding: 0px 5%;
+
+		.white-player-info,
+		.black-player-info {
+			width: 50%;
+			height: 100%;
+			float: left;
+
+			.player-name {
+				width: 75%;
+			}
+
+			.player-time {
+				width: 25%;
+			}
+
+			.player-name,
+			.player-time {
+				height: 100%;
+				float: left;
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				align-content: center;
+				flex-direction: column;
+			}
+		}
 	}
 
-	.chess-piece-container {
-		width: 12.5%;
-		height: 12.5%;
-		position: absolute;
+	.y-coordinates {
+		width: 5%;
+		height: 90%;
+		float: left;
+		display: inline-block;
+		clear: both;
 
-		&.draggable:hover {
-			cursor: pointer;
+		.y-coordinate {
+			height: 12.5%;
+			width: 100%;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			flex-direction: column;
 		}
+	}
 
-		.chess-piece {
+	.x-coordinates {
+		width: 100%;
+		height: 5%;
+		padding: 0px 5%;
+		clear: both;
+
+		.x-coordinate {
+			width: 12.5%;
+			height: 100%;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			flex-direction: column;
+			float: left;
+		}
+	}
+
+	.chess-board-container {
+		width: 90%;
+		height: 90%;
+		float: left;
+		display: inline-block;
+		position: relative;
+
+		.chess-board {
 			width: 100%;
 			height: 100%;
+		}
+
+		.chess-piece-container {
+			width: 12.5%;
+			height: 12.5%;
+			position: absolute;
+
+			&.draggable:hover {
+				cursor: pointer;
+			}
+
+			.chess-piece {
+				width: 100%;
+				height: 100%;
+			}
 		}
 	}
 }

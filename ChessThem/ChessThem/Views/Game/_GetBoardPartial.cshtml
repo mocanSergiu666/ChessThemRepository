@@ -1,55 +1,86 @@
 ﻿@{
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<div id="chess-board-container" class="center-block">
-	<img class="chess-board img-responsive" src="~/Images/ChessImages/Board.jpg" />
-	<div class="chess-piece-container" style="top: 0%; left: 0%;">
-		<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/BlackRook.png" />
+<div class="chess-container center-block">
+	<div class="info">
+		<div class="white-player-info">
+			<div class="player-name">White Player</div>
+			<div class="player-time">03:30</div>
+		</div>
+		<div class="black-player-info">
+			<div class="player-name">Black Player</div>
+			<div class="player-time">02:00</div>
+		</div>
 	</div>
-	<div class="chess-piece-container" style="top: 0%; left: 12.5%;">
-		<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/BlackNight.png" />
+	<div class="y-coordinates">
+		<div class="y-coordinate">8</div>
+		<div class="y-coordinate">7</div>
+		<div class="y-coordinate">6</div>
+		<div class="y-coordinate">5</div>
+		<div class="y-coordinate">4</div>
+		<div class="y-coordinate">3</div>
+		<div class="y-coordinate">2</div>
+		<div class="y-coordinate">1</div>
 	</div>
-	<div class="chess-piece-container" style="top: 0%; left: 25%;">
-		<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/BlackBishop.png" />
+	<div class="chess-board-container">
+		<img class="chess-board img-responsive" src="~/Images/ChessImages/Board.jpg" />
+		<div class="chess-piece-container" style="top: 0%; left: 0%;">
+			<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/BlackRook.png" />
+		</div>
+		<div class="chess-piece-container" style="top: 0%; left: 12.5%;">
+			<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/BlackNight.png" />
+		</div>
+		<div class="chess-piece-container" style="top: 0%; left: 25%;">
+			<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/BlackBishop.png" />
+		</div>
+		<div class="chess-piece-container" style="top: 0%; left: 37.5%;">
+			<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/BlackQueen.png" />
+		</div>
+		<div class="chess-piece-container" style="top: 0%; left: 50%;">
+			<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/BlackKing.png" />
+		</div>
+		<div class="chess-piece-container" style="top: 0%; left: 62.5%;">
+			<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/BlackBishop.png" />
+		</div>
+		<div class="chess-piece-container" style="top: 0%; left: 75%;">
+			<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/BlackNight.png" />
+		</div>
+		<div class="chess-piece-container" style="top: 0%; left: 87.5%;">
+			<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/BlackRook.png" />
+		</div>
+		<div class="chess-piece-container draggable" style="top: 87.5%; left: 0%;">
+			<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/WhiteRook.png" />
+		</div>
+		<div class="chess-piece-container draggable" style="top: 87.5%; left: 12.5%;">
+			<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/WhiteNight.png" />
+		</div>
+		<div class="chess-piece-container draggable" style="top: 87.5%; left: 25%;">
+			<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/WhiteBishop.png" />
+		</div>
+		<div class="chess-piece-container draggable" style="top: 87.5%; left: 37.5%;">
+			<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/WhiteQueen.png" />
+		</div>
+		<div class="chess-piece-container draggable" style="top: 87.5%; left: 50%;">
+			<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/WhiteKing.png" />
+		</div>
+		<div class="chess-piece-container draggable" style="top: 87.5%; left: 62.5%;">
+			<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/WhiteBishop.png" />
+		</div>
+		<div class="chess-piece-container draggable" style="top: 87.5%; left: 75%;">
+			<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/WhiteNight.png" />
+		</div>
+		<div class="chess-piece-container draggable" style="top: 87.5%; left: 87.5%;">
+			<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/WhiteRook.png" />
+		</div>
 	</div>
-	<div class="chess-piece-container" style="top: 0%; left: 37.5%;">
-		<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/BlackQueen.png" />
-	</div>
-	<div class="chess-piece-container" style="top: 0%; left: 50%;">
-		<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/BlackKing.png" />
-	</div>
-	<div class="chess-piece-container" style="top: 0%; left: 62.5%;">
-		<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/BlackBishop.png" />
-	</div>
-	<div class="chess-piece-container" style="top: 0%; left: 75%;">
-		<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/BlackNight.png" />
-	</div>
-	<div class="chess-piece-container" style="top: 0%; left: 87.5%;">
-		<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/BlackRook.png" />
-	</div>
-	<div class="chess-piece-container draggable" style="top: 87.5%; left: 0%;">
-		<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/WhiteRook.png" />
-	</div>
-	<div class="chess-piece-container draggable" style="top: 87.5%; left: 12.5%;">
-		<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/WhiteNight.png" />
-	</div>
-	<div class="chess-piece-container draggable" style="top: 87.5%; left: 25%;">
-		<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/WhiteBishop.png" />
-	</div>
-	<div class="chess-piece-container draggable" style="top: 87.5%; left: 37.5%;">
-		<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/WhiteQueen.png" />
-	</div>
-	<div class="chess-piece-container draggable" style="top: 87.5%; left: 50%;">
-		<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/WhiteKing.png" />
-	</div>
-	<div class="chess-piece-container draggable" style="top: 87.5%; left: 62.5%;">
-		<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/WhiteBishop.png" />
-	</div>
-	<div class="chess-piece-container draggable" style="top: 87.5%; left: 75%;">
-		<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/WhiteNight.png" />
-	</div>
-	<div class="chess-piece-container draggable" style="top: 87.5%; left: 87.5%;">
-		<img class="chess-piece img-responsive" src="~/Images/ChessImages/Pieces/WhiteRook.png" />
+	<div class="x-coordinates">
+		<div class="x-coordinate">A</div>
+		<div class="x-coordinate">B</div>
+		<div class="x-coordinate">C</div>
+		<div class="x-coordinate">D</div>
+		<div class="x-coordinate">E</div>
+		<div class="x-coordinate">F</div>
+		<div class="x-coordinate">G</div>
+		<div class="x-coordinate">H</div>
 	</div>
 </div>
