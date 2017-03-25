@@ -181,11 +181,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="ChessStuff\Board.cs" />
+    <Compile Include="ChessStuff\BoardCell.cs" />
+    <Compile Include="ChessStuff\Game.cs" />
+    <Compile Include="ChessStuff\MoveValidator.cs" />
     <Compile Include="ChessStuff\Piece.cs" />
     <Compile Include="ChessStuff\PieceType.cs" />
     <Compile Include="ChessStuff\Player.cs" />
     <Compile Include="ChessStuff\Color.cs" />
     <Compile Include="ChessStuff\Players.cs" />
+    <Compile Include="ChessStuff\Position.cs" />
     <Compile Include="ChessStuff\XCoordinate.cs" />
     <Compile Include="ChessStuff\YCoordinate.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -301,6 +305,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Less\GlobalVariables.less" />
     <Content Include="Less\Global.less" />
+    <Content Include="ChessStuff\InitialBoardState.json" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>

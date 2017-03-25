@@ -1,22 +1,30 @@
-﻿using System;
+﻿using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.IO;
 
 namespace ChessThem.ChessStuff
 {
 	public class Board
 	{
+		private const int _size = 8;
 		private static Board _instance;
+		private static List<BoardCell> _initialBoardState;
+		private static Piece[,] _board;
 
 		static Board()
 		{
 			_instance = new Board();
+			
+			using (StreamReader streamReader = new StreamReader("InitialBoardState.json"))
+			{
+				string initialBoardStateJson = streamReader.ReadToEnd();
+				_initialBoardState = JsonConvert.DeserializeObject<List<BoardCell>>(initialBoardStateJson);
+			}
 		}
 
 		private Board()
 		{
-			_pieces = new Piece[8, 8];
+			_board = new Piece[_size, _size];
 		}
 
 		public static Board Instance
@@ -27,33 +35,34 @@ namespace ChessThem.ChessStuff
 			}
 		}
 
-		private Piece[,] _pieces;
-
-		public Piece this[XCoordinate x, YCoordinate y]
+		public Piece this[Position position]
 		{
 			get
 			{
-				return _pieces[(int)x, (int)y];
+				return _board[(int)position.X, (int)position.Y];
 			}
 
 			set
 			{
-				_pieces[(int)x, (int)y] = value;
+				_board[(int)position.X, (int)position.Y] = value;
 			}
 		}
 
 		public void Initialize()
 		{
-			//this[XCoordinate.A, YCoordinate.One] = new Piece
-			//{
-			//	Color = Color.White,
-			//	Type = PieceType.Rook
-			//};
-			//this[XCoordinate.A, YCoordinate.One] = new Piece
-			//{
-			//	Color = Color.White,
-			//	Type = PieceType.Rook
-			//};
+			Clear();
+
+			foreach (BoardCell boardCell in _initialBoardState)
+			{
+				this[boardCell.Position] = boardCell.Piece;
+			}
+		}
+
+		private void Clear()
+		{
+			for (int i = 0; i < _board.GetLength(0); i++)
+				for (int j = 0; j < _board.GetLength(1); j++)
+					_board[i, j] = null;
 		}
 	}
 }

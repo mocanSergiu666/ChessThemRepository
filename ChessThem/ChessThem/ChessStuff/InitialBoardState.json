@@ -1,0 +1,322 @@
+﻿[
+	{
+		"position": {
+			"x": "A",
+			"y": "One"
+		},
+		"piece": {
+			"color": "White",
+			"type": "Rook"
+		}
+	},
+	{
+		"position": {
+			"x": "B",
+			"y": "One"
+		},
+		"piece": {
+			"color": "White",
+			"type": "Night"
+		}
+	},
+	{
+		"position": {
+			"x": "C",
+			"y": "One"
+		},
+		"piece": {
+			"color": "White",
+			"type": "Bishop"
+		}
+	},
+	{
+		"position": {
+			"x": "D",
+			"y": "One"
+		},
+		"piece": {
+			"color": "White",
+			"type": "Queen"
+		}
+	},
+	{
+		"position": {
+			"x": "E",
+			"y": "One"
+		},
+		"piece": {
+			"color": "White",
+			"type": "King"
+		}
+	},
+	{
+		"position": {
+			"x": "F",
+			"y": "One"
+		},
+		"piece": {
+			"color": "White",
+			"type": "Bishop"
+		}
+	},
+	{
+		"position": {
+			"x": "G",
+			"y": "One"
+		},
+		"piece": {
+			"color": "White",
+			"type": "Night"
+		}
+	},
+	{
+		"position": {
+			"x": "H",
+			"y": "One"
+		},
+		"piece": {
+			"color": "White",
+			"type": "Rook"
+		}
+	},
+	{
+		"position": {
+			"x": "A",
+			"y": "Two"
+		},
+		"piece": {
+			"color": "White",
+			"type": "Pawn"
+		}
+	},
+	{
+		"position": {
+			"x": "B",
+			"y": "Two"
+		},
+		"piece": {
+			"color": "White",
+			"type": "Pawn"
+		}
+	},
+	{
+		"position": {
+			"x": "C",
+			"y": "Two"
+		},
+		"piece": {
+			"color": "White",
+			"type": "Pawn"
+		}
+	},
+	{
+		"position": {
+			"x": "D",
+			"y": "Two"
+		},
+		"piece": {
+			"color": "White",
+			"type": "Pawn"
+		}
+	},
+	{
+		"position": {
+			"x": "E",
+			"y": "Two"
+		},
+		"piece": {
+			"color": "White",
+			"type": "Pawn"
+		}
+	},
+	{
+		"position": {
+			"x": "F",
+			"y": "Two"
+		},
+		"piece": {
+			"color": "White",
+			"type": "Pawn"
+		}
+	},
+	{
+		"position": {
+			"x": "G",
+			"y": "Two"
+		},
+		"piece": {
+			"color": "White",
+			"type": "Pawn"
+		}
+	},
+	{
+		"position": {
+			"x": "H",
+			"y": "Two"
+		},
+		"piece": {
+			"color": "White",
+			"type": "Pawn"
+		}
+	},
+	{
+		"position": {
+			"x": "A",
+			"y": "Eight"
+		},
+		"piece": {
+			"color": "Black",
+			"type": "Rook"
+		}
+	},
+	{
+		"position": {
+			"x": "B",
+			"y": "Eight"
+		},
+		"piece": {
+			"color": "Black",
+			"type": "Night"
+		}
+	},
+	{
+		"position": {
+			"x": "C",
+			"y": "Eight"
+		},
+		"piece": {
+			"color": "Black",
+			"type": "Bishop"
+		}
+	},
+	{
+		"position": {
+			"x": "D",
+			"y": "Eight"
+		},
+		"piece": {
+			"color": "Black",
+			"type": "Queen"
+		}
+	},
+	{
+		"position": {
+			"x": "E",
+			"y": "Eight"
+		},
+		"piece": {
+			"color": "Black",
+			"type": "King"
+		}
+	},
+	{
+		"position": {
+			"x": "F",
+			"y": "Eight"
+		},
+		"piece": {
+			"color": "Black",
+			"type": "Bishop"
+		}
+	},
+	{
+		"position": {
+			"x": "G",
+			"y": "Eight"
+		},
+		"piece": {
+			"color": "Black",
+			"type": "Night"
+		}
+	},
+	{
+		"position": {
+			"x": "H",
+			"y": "Eight"
+		},
+		"piece": {
+			"color": "Black",
+			"type": "Rook"
+		}
+	},
+	{
+		"position": {
+			"x": "A",
+			"y": "Seven"
+		},
+		"piece": {
+			"color": "Black",
+			"type": "Pawn"
+		}
+	},
+	{
+		"position": {
+			"x": "B",
+			"y": "Seven"
+		},
+		"piece": {
+			"color": "Black",
+			"type": "Pawn"
+		}
+	},
+	{
+		"position": {
+			"x": "C",
+			"y": "Seven"
+		},
+		"piece": {
+			"color": "Black",
+			"type": "Pawn"
+		}
+	},
+	{
+		"position": {
+			"x": "D",
+			"y": "Seven"
+		},
+		"piece": {
+			"color": "Black",
+			"type": "Pawn"
+		}
+	},
+	{
+		"position": {
+			"x": "E",
+			"y": "Seven"
+		},
+		"piece": {
+			"color": "Black",
+			"type": "Pawn"
+		}
+	},
+	{
+		"position": {
+			"x": "F",
+			"y": "Seven"
+		},
+		"piece": {
+			"color": "Black",
+			"type": "Pawn"
+		}
+	},
+	{
+		"position": {
+			"x": "G",
+			"y": "Seven"
+		},
+		"piece": {
+			"color": "Black",
+			"type": "Pawn"
+		}
+	},
+	{
+		"position": {
+			"x": "H",
+			"y": "Seven"
+		},
+		"piece": {
+			"color": "Black",
+			"type": "Pawn"
+		}
+	}
+]
