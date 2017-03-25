@@ -6,7 +6,7 @@ namespace ChessThem.ChessStuff
 {
 	public class Board
 	{
-		private const int _size = 8;
+		public const int Size = 8;
 		private static Board _instance;
 		private static List<BoardCell> _initialBoardState;
 		private static Piece[,] _board;
@@ -24,7 +24,7 @@ namespace ChessThem.ChessStuff
 
 		private Board()
 		{
-			_board = new Piece[_size, _size];
+			_board = new Piece[Size, Size];
 		}
 
 		public static Board Instance

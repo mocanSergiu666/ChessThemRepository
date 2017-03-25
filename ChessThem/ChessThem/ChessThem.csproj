@@ -184,6 +184,8 @@
     <Compile Include="ChessStuff\BoardCell.cs" />
     <Compile Include="ChessStuff\Game.cs" />
     <Compile Include="ChessStuff\MoveValidator.cs" />
+    <Compile Include="ChessStuff\OutOfBoardException.cs" />
+    <Compile Include="ChessStuff\PositionExtender.cs" />
     <Compile Include="ChessStuff\Piece.cs" />
     <Compile Include="ChessStuff\PieceType.cs" />
     <Compile Include="ChessStuff\Player.cs" />
@@ -276,7 +278,9 @@
     <Content Include="Images\ChessImages\Pieces\WhiteQueen.png" />
     <Content Include="Images\ChessImages\Pieces\WhiteRook.png" />
     <Content Include="Javascript\Global.js" />
+    <Content Include="Javascript\PlayerInfo.js" />
     <Content Include="Javascript\SignalROperations.js" />
+    <Content Include="Javascript\Utilities.js" />
     <Content Include="Less\BootstrapOverrides.css">
       <DependentUpon>BootstrapOverrides.less</DependentUpon>
     </Content>

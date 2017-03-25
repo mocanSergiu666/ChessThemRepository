@@ -39,6 +39,7 @@ namespace ChessThem.ChessStuff
 		public bool IsMoveValid(Position from, Position to)
 		{
 			return true;
+			// TODO
 		}
 
 		public void Initialize()

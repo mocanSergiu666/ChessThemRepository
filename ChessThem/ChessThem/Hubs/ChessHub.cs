@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNet.SignalR.Hubs;
+using ChessThem.ChessStuff;
 
 namespace ChessThem.Hubs
 {
@@ -24,6 +25,12 @@ namespace ChessThem.Hubs
 		public override Task OnDisconnected(bool stopCalled)
 		{
 			return base.OnDisconnected(stopCalled);
+		}
+
+		[HubMethodName("tryMove")]
+		public bool TryMove(Position from, Position to)
+		{
+			return Game.TryMove(from, to);
 		}
 	}
 }
