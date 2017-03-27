@@ -1,24 +1,28 @@
 ﻿@import "GlobalVariables.less";
 
+.container-fluid {
+	padding-top: 15px;
+}
+
 .nav-pills > li {
 	float: none;
 	margin-bottom: 4px;
 
 	&.active {
 		> a {
-			background-color: @global-background-color-4;
+			background-color: @blue-color;
 
 			&:hover {
-				background-color: @global-background-color-3;
+				background-color: @violet-color;
 			}
 		}
 	}
 
 	> a {
 		border-radius: 0px;
-		background-color: @global-background-color-1;
-		color: @global-color-1;
-		border: solid @global-border-size @global-color-1;
+		background-color: @black-color;
+		color: @white-color;
+		border: solid @micro-border-size @white-color;
 		text-align: center;
 	}
 
@@ -29,11 +33,11 @@
 
 .nav > li > a {
 	&:hover {
-		background-color: @global-background-color-3;
+		background-color: @violet-color;
 	}
 
 	&:focus {
-		background-color: @global-background-color-1;
+		background-color: @black-color;
 	}
 }
 
@@ -43,7 +47,7 @@
 }
 
 .jumbotron {
-	background-color: @global-background-color-1;
+	background-color: @black-color;
 }
 
 .form-control {
@@ -53,18 +57,19 @@
 
 .radio label,
 .checkbox label {
-	color: @global-color-1;
+	color: @white-color;
 }
 
 .btn {
 	border-radius: 0px;
-	border: solid @global-border-size @global-color-2;
-	background-color: @global-background-color-2;
+	border: solid @micro-border-size @black-color;
+	background-color: @white-color;
+	color: #555;
 }
 
 .modal-content {
-	background-color: @global-background-color-5;
-	border: @global-border-size solid @global-color-1;
+	background-color: @red-color;
+	border: @micro-border-size solid @white-color;
 	border-radius: 0px;
 }
 
@@ -72,10 +77,18 @@ button.close {
 	margin: 0px 2px;
 	text-shadow: none;
 	opacity: 1;
-	color: @global-color-1;
+	color: @white-color;
 
 	&:hover,
 	&:focus {
-		color: @global-color-2;
+		color: @black-color;
 	}
+}
+
+.alert {
+	padding: 0px;
+	border: @micro-border-size solid @white-color;
+	border-radius: 0px;
+	margin-bottom: 4px;
+	background-color: @violet-color;
 }

@@ -11,14 +11,9 @@ namespace ChessThem.Controllers
         }
 
 		[ChildActionOnly]
-		public PartialViewResult GetConnectionFailPopup()
+		public PartialViewResult ConnectionFailPopup()
 		{
-			return PartialView("_GetConnectionFailPopupPartial");
-		}
-
-		public ActionResult Connect()
-		{
-			return RedirectToAction("GetBoard", "Game");
+			return PartialView("_ConnectionFailPopupPartial");
 		}
 	}
 }

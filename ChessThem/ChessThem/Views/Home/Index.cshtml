@@ -15,15 +15,15 @@
 			<div class="col-xs-8">
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade active in" id="go-anonymous">
-						<form class="form-inline">
+						<form class="form-inline" method="get" action="@Url.Action("Connect", "Game", new { ConnectionMode = "go-anonymous" })">
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="Username...">
 							</div>
-							<button class="btn form-control connect">Connect!</button>
+							<button class="btn form-control">Connect!</button>
 						</form>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="log-in">
-						<form class="form-inline">
+						<form class="form-inline" method="get" action="@Url.Action("Connect", "Game", new { ConnectionMode = "log-in" })">
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="Username...">
 							</div>
@@ -37,11 +37,11 @@
 									</label>
 								</div>
 							</div>
-							<button class="btn form-control connect">Connect!</button>
+							<button class="btn form-control">Connect!</button>
 						</form>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="sign-up">
-						<form class="form-inline">
+						<form class="form-inline" method="get" action="@Url.Action("Connect", "Game", new { ConnectionMode = "sign-up" })">
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="Username...">
 							</div>
@@ -51,7 +51,7 @@
 							<div class="form-group">
 								<input type="password" class="form-control" placeholder="Password confirmation...">
 							</div>
-							<button class="btn form-control connect">Connect!</button>
+							<button class="btn form-control">Connect!</button>
 						</form>
 					</div>
 				</div>
@@ -59,4 +59,4 @@
 		</div>
 	</div>
 </div>
-@Html.Action("GetConnectionFailPopup")
+@Html.Action("ConnectionFailPopup")

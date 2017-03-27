@@ -3,9 +3,9 @@
 	$(this).tab('show');
 });
 
-$("button.connect").click(function (event) {
+$(".chat-send").click(function (event) {
 	event.preventDefault();
-	connect($(this).closest(".tab-pane").attr("id"));
+	sendMessage($(".chat-input").text());
 });
 
 $(".chess-piece-container.draggable").draggable({
@@ -62,4 +62,8 @@ function onStopDragging(event, ui) {
 
 function tryMove() {
 	return true;//chessHub.server.tryMove();
+}
+
+function sendMessage() {
+	// TODO
 }

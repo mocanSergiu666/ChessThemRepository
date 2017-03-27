@@ -1,4 +1,7 @@
-﻿.nav-pills > li {
+﻿.container-fluid {
+  padding-top: 15px;
+}
+.nav-pills > li {
   float: none;
   margin-bottom: 4px;
 }
@@ -43,6 +46,7 @@
   border-radius: 0px;
   border: solid 1px black;
   background-color: white;
+  color: #555;
 }
 .modal-content {
   background-color: #801a1a;
@@ -58,4 +62,11 @@ button.close {
 button.close:hover,
 button.close:focus {
   color: black;
+}
+.alert {
+  padding: 0px;
+  border: 1px solid white;
+  border-radius: 0px;
+  margin-bottom: 4px;
+  background-color: #0d102d;
 }

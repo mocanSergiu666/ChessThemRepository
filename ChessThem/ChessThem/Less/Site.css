@@ -102,3 +102,28 @@
   width: 100%;
   height: 100%;
 }
+.chat {
+  padding: 4px;
+  background-color: white;
+}
+.chat .chat-heading {
+  color: #0d102d;
+  text-align: center;
+}
+.chat .chat-message {
+  color: white;
+  background-color: #0d102d;
+}
+.chat .chat-input {
+  width: 100%;
+  border: 1px solid #0d102d;
+  resize: vertical;
+  padding: 0px;
+  background-color: white;
+  color: #0d102d;
+}
+.chat .chat-send {
+  background-color: #0d102d;
+  color: white;
+  border: 1px solid #0d102d;
+}

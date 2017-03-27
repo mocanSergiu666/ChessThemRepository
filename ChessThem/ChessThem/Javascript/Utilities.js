@@ -26,7 +26,20 @@ function fromBoardCoordinates(boardCoordinaes, boardSize) {
 		y: 0
 	};
 
-	// TODO
+	var cellWidth = boardSize.width / 8;
+	var cellHeight = boardSize.height / 8;
+
+	if (playerColor == "White") {
+		coordinates.x = boardCoordinates.x * cellWidth;
+		coordinates.y = boardSize.height - cellHeight - boardCoordinates.y * cellHeight;
+	}
+
+	if (playerColor == "Black") {
+		coordinates.x = boardSize.width - cellWidth - boardCoordinates.x * cellWidth;
+		coordinates.y = boardCoordinates.y * cellHeight;
+	}
+
+	return coordinates;
 }
 
 function toFixedPositionOnBoard(position, boardSize) {

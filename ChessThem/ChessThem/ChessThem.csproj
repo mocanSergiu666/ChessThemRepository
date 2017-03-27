@@ -370,8 +370,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\_GetConnectionFailPopupPartial.cshtml" />
-    <Content Include="Views\Game\_GetBoardPartial.cshtml" />
+    <Content Include="Views\Home\_ConnectionFailPopupPartial.cshtml" />
+    <Content Include="Views\Game\_BoardPartial.cshtml" />
+    <Content Include="Views\Game\_ChatPartial.cshtml" />
+    <Content Include="Views\Game\GameArea.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

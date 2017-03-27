@@ -4,14 +4,14 @@
 	position: fixed;
 	bottom: 0px;
 	width: 100%;
-	background-color: @global-background-color-3;
-	color: @global-color-1;
+	background-color: @violet-color;
+	color: @white-color;
 }
 
 #home-menu {
 	#greeting {
 		text-align: center;
-		color: @global-color-1;
+		color: @white-color;
 	}
 }
 
@@ -117,5 +117,35 @@
 				height: 100%;
 			}
 		}
+	}
+}
+
+.chat {
+	padding: 4px;
+	background-color: @white-color;
+
+	.chat-heading {
+		color: @violet-color;
+		text-align: center;
+	}
+
+	.chat-message {
+		color: @white-color;
+		background-color: @violet-color;
+	}
+
+	.chat-input {
+		width: 100%;
+		border: @micro-border-size solid @violet-color;
+		resize: vertical;
+		padding: 0px;
+		background-color: @white-color;
+		color: @violet-color;
+	}
+
+	.chat-send {
+		background-color: #0d102d;
+		color: white;
+		border: @micro-border-size solid @violet-color;
 	}
 }

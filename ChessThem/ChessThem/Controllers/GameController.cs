@@ -14,9 +14,19 @@ namespace ChessThem.Controllers
             return View();
         }
 
-		public PartialViewResult GetBoard()
+		public ActionResult Connect(string connectionMode)
 		{
-			return PartialView("_GetBoardPartial");
+			return View("GameArea");
+		}
+
+		public PartialViewResult Board()
+		{
+			return PartialView("_BoardPartial");
+		}
+
+		public PartialViewResult Chat()
+		{
+			return PartialView("_ChatPartial");
 		}
 	}
 }
