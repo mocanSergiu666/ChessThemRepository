@@ -202,6 +202,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Hubs\ChessHub.cs" />
+    <Compile Include="Hubs\IClientHub.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -277,8 +278,10 @@
     <Content Include="Images\ChessImages\Pieces\WhitePawn.png" />
     <Content Include="Images\ChessImages\Pieces\WhiteQueen.png" />
     <Content Include="Images\ChessImages\Pieces\WhiteRook.png" />
+    <Content Include="Javascript\EventsHandlers.js" />
     <Content Include="Javascript\Global.js" />
-    <Content Include="Javascript\PlayerInfo.js" />
+    <Content Include="Javascript\UserInfo.js" />
+    <Content Include="Javascript\SignalREventsHandlers.js" />
     <Content Include="Javascript\SignalROperations.js" />
     <Content Include="Javascript\Utilities.js" />
     <Content Include="Less\BootstrapOverrides.css">

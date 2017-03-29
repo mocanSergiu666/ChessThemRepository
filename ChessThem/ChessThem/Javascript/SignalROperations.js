@@ -1,37 +1,34 @@
-﻿//var connectionModeId;
-//var chessHub = $.connection.chessHub;
-//var connectionOptions = { transport: ["webSockets", "serverSentEvents", "foreverFrame", "longPolling"] };
+﻿var chessHub = $.connection.chessHub;
 
-//function onHubError() {
+chessHub.client.recieveMessage = function (sender, message) {
+	var $message = $("<div />", {
+		role: "alert",
+		text: [sender, message].join(": ")
+	});
 
-//}
+	$message.addClass("alert chat-message");
 
-//function onHubConnectionSlow() {
+	$(".chat-messages").append($message);
+}
 
-//}
+chessHub.client.performPlayerMove = function (from, to) {
 
-//function onHubDisconnected() {
+}
 
-//}
+function initializeConnection() {	
+	var connectionOptions = { transport: ["webSockets", "serverSentEvents", "foreverFrame", "longPolling"] };
+	$.connection.hub.logging = true;
+	$.connection.hub.error(onHubError);
+	$.connection.hub.connectionSlow(onHubConnectionSlow);
+	$.connection.hub.disconnected(onHubDisconnected);
+	$.connection.hub.url = "/chesssignalr"
+	$.connection.hub.start().done(onHubStartDone).fail(onHubStartFail);
+}
 
-//function onHubStartDone() {
-//	var url = "/Home/Connect/";
-//	window.location.href = window.location.origin + url;
-//}
+function tryMove() {
+	return chessHub.server.tryMove();
+}
 
-//function onHubStartFail() {
-//	var options = {
-//		backdrop: "static",
-//		keyboard: true,
-//		show: true
-//	};
-//	$("#connection-fail").modal(options);
-//}
-
-//$.connection.hub.logging = true;
-//$.connection.hub.error(onHubError);
-//$.connection.hub.connectionSlow(onHubConnectionSlow);
-//$.connection.hub.disconnected(onHubDisconnected);
-
-//$.connection.hub.start().done(onHubStartDone).fail(onHubStartFail);
-
+function sendMessage(message) {
+	chessHub.server.sendMessage(message);
+}

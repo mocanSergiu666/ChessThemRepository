@@ -10,7 +10,7 @@ using ChessThem.ChessStuff;
 namespace ChessThem.Hubs
 {
 	[HubName("chessHub")]
-	public class ChessHub : Hub
+	public class ChessHub : Hub<IClientHub>
 	{
 		public override Task OnConnected()
 		{
@@ -28,9 +28,15 @@ namespace ChessThem.Hubs
 		}
 
 		[HubMethodName("tryMove")]
-		public bool TryMove(Position from, Position to)
+		public Task<bool> TryMove(Position from, Position to)
 		{
-			return Game.TryMove(from, to);
+			return new Task<bool>(() => true);// Game.TryMove(from, to);
+		}
+
+		[HubMethodName("sendMessage")]
+		public void SendMessage(string message)
+		{
+			Clients.All.RecieveMessage("ciuvac", message);
 		}
 	}
 }

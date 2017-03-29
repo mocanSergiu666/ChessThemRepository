@@ -8,12 +8,6 @@ namespace ChessThem.Controllers
 {
     public class GameController : Controller
     {
-        // GET: Game
-        public ActionResult Index()
-        {
-            return View();
-        }
-
 		public ActionResult Connect(string connectionMode)
 		{
 			return View("GameArea");
