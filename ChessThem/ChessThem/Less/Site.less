@@ -1,4 +1,9 @@
-﻿@import "GlobalVariables.less";
+﻿@import "Variables.less";
+
+body {
+	color: white;
+	background-color: black;
+}
 
 #site-footer {
 	position: fixed;
@@ -20,8 +25,25 @@
 }
 
 .chess-container {
-	width: 600px;
-	height: 600px;
+	@media (min-width: @xs-limit) {
+		width: 200px;
+		height: 200px;
+	}
+
+	@media (min-width: @sm-limit) {
+		width: 300px;
+		height: 300px;
+	}
+
+	@media (min-width: @md-limit) {
+		width: 400px;
+		height: 400px;
+	}
+
+	@media (min-width: @lg-limit) {
+		width: 500px;
+		height: 500px;
+	}
 
 	.info {
 		width: 100%;
@@ -129,15 +151,22 @@
 		text-align: center;
 	}
 
-	.chat-message {
-		color: @white-color;
-		background-color: @violet-color;
+	.chat-messages {
+		height: 300px;
+		overflow-y: auto;
+
+		.chat-message {
+			color: @white-color;
+			background-color: @violet-color;
+			word-wrap: break-word;
+		}
 	}
 
 	.chat-input {
 		width: 100%;
 		border: @micro-border-size solid @violet-color;
 		resize: vertical;
+		max-height: 100px;
 		padding: 0px;
 		background-color: @white-color;
 		color: @violet-color;

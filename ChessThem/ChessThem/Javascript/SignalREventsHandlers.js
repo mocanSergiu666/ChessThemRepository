@@ -11,7 +11,7 @@ function onHubDisconnected() {
 }
 
 function onHubStartDone() {
-
+	getBoardState();
 }
 
 function onHubStartFail() {

@@ -182,6 +182,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="ChessStuff\Board.cs" />
     <Compile Include="ChessStuff\BoardCell.cs" />
+    <Compile Include="ChessStuff\BoardCellState.cs" />
     <Compile Include="ChessStuff\Game.cs" />
     <Compile Include="ChessStuff\MoveValidator.cs" />
     <Compile Include="ChessStuff\OutOfBoardException.cs" />
@@ -192,8 +193,12 @@
     <Compile Include="ChessStuff\Color.cs" />
     <Compile Include="ChessStuff\Players.cs" />
     <Compile Include="ChessStuff\Position.cs" />
+    <Compile Include="ChessStuff\Spectator.cs" />
+    <Compile Include="ChessStuff\Spectators.cs" />
+    <Compile Include="ChessStuff\Utilities.cs" />
     <Compile Include="ChessStuff\XCoordinate.cs" />
     <Compile Include="ChessStuff\YCoordinate.cs" />
+    <Compile Include="Configurations\Configurator.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -207,6 +212,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Configurations\SignalRContractResolver.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -290,14 +296,8 @@
     <Content Include="Less\BootstrapOverrides.min.css">
       <DependentUpon>BootstrapOverrides.css</DependentUpon>
     </Content>
-    <Content Include="Less\Global.css">
-      <DependentUpon>Global.less</DependentUpon>
-    </Content>
-    <Content Include="Less\Global.min.css">
-      <DependentUpon>Global.css</DependentUpon>
-    </Content>
     <Content Include="Less\GlobalVariables.css">
-      <DependentUpon>GlobalVariables.less</DependentUpon>
+      <DependentUpon>Variables.less</DependentUpon>
     </Content>
     <Content Include="Less\GlobalVariables.min.css">
       <DependentUpon>GlobalVariables.css</DependentUpon>
@@ -310,9 +310,8 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Less\GlobalVariables.less" />
-    <Content Include="Less\Global.less" />
-    <Content Include="ChessStuff\InitialBoardState.json" />
+    <Content Include="Less\Variables.less" />
+    <EmbeddedResource Include="ChessStuff\InitialBoardState.json" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>

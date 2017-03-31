@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.SignalR;
+﻿using ChessThem.Configurations;
+using Microsoft.AspNet.SignalR;
 using Microsoft.Owin;
 using Owin;
 
@@ -10,7 +11,9 @@ namespace ChessThem
 		public void Configuration(IAppBuilder app)
 		{
 			ConfigureAuth(app);
-			
+
+			Configurator.ConfigureAndRegisterJsonSerializer();
+
 			app.MapSignalR("/chesssignalr", new HubConfiguration()
 			{
 				EnableDetailedErrors = true,

@@ -6,8 +6,10 @@
 function onChatSend(event) {
 	event.preventDefault();
 	var message = $(".chat-input").val();
-	$(".chat-input").val("")
-	sendMessage(message);
+	if (message != "") {
+		$(".chat-input").val("")
+		sendMessage(message);
+	}
 }
 
 function onStopDraggingChessPiece(event, ui) {
@@ -52,4 +54,9 @@ function onStopDraggingChessPiece(event, ui) {
 			top: startPosition.y
 		});
 	}
+}
+
+function onWindowResize() {
+	clearBoardState();
+	getBoardState();
 }

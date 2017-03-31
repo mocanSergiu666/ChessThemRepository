@@ -8,7 +8,9 @@ chessHub.client.recieveMessage = function (sender, message) {
 
 	$message.addClass("alert chat-message");
 
-	$(".chat-messages").append($message);
+	var $messages = $(".chat-messages").first();
+	$messages.append($message);
+	$messages.scrollTop($messages.prop("scrollHeight"));
 }
 
 chessHub.client.performPlayerMove = function (from, to) {
@@ -31,4 +33,8 @@ function tryMove() {
 
 function sendMessage(message) {
 	chessHub.server.sendMessage(message);
+}
+
+function getBoardState() {
+	chessHub.server.getBoardState().done(setBoardState);
 }

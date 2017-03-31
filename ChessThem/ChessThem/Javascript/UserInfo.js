@@ -1,2 +1,2 @@
 ﻿var userId;
-var playerColor;
+var playerColor = "Black";

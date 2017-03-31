@@ -38,5 +38,11 @@ namespace ChessThem.Hubs
 		{
 			Clients.All.RecieveMessage("ciuvac", message);
 		}
+
+		[HubMethodName("getBoardState")]
+		public List<BoardCellState> GetBoardState()
+		{
+			return Board.State;
+		}
 	}
 }

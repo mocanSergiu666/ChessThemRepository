@@ -1,4 +1,8 @@
-﻿#site-footer {
+﻿body {
+  color: white;
+  background-color: black;
+}
+#site-footer {
   position: fixed;
   bottom: 0px;
   width: 100%;
@@ -12,9 +16,29 @@
 #connection-fail-message {
   text-align: center;
 }
-.chess-container {
-  width: 600px;
-  height: 600px;
+@media (min-width: 0px) {
+  .chess-container {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (min-width: 768px) {
+  .chess-container {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .chess-container {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media (min-width: 1200px) {
+  .chess-container {
+    width: 500px;
+    height: 500px;
+  }
 }
 .chess-container .info {
   width: 100%;
@@ -110,14 +134,20 @@
   color: #0d102d;
   text-align: center;
 }
-.chat .chat-message {
+.chat .chat-messages {
+  height: 300px;
+  overflow-y: auto;
+}
+.chat .chat-messages .chat-message {
   color: white;
   background-color: #0d102d;
+  word-wrap: break-word;
 }
 .chat .chat-input {
   width: 100%;
   border: 1px solid #0d102d;
   resize: vertical;
+  max-height: 100px;
   padding: 0px;
   background-color: white;
   color: #0d102d;

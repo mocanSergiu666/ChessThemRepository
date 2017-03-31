@@ -14,11 +14,12 @@ namespace ChessThem.ChessStuff
 		static Board()
 		{
 			_instance = new Board();
-			
-			using (StreamReader streamReader = new StreamReader("InitialBoardState.json"))
+
+			using (StreamReader streamReader = new StreamReader(Utilities.GetInitialBoardStateStream()))
 			{
 				string initialBoardStateJson = streamReader.ReadToEnd();
 				_initialBoardState = JsonConvert.DeserializeObject<List<BoardCell>>(initialBoardStateJson);
+				Instance.Initialize();
 			}
 		}
 
@@ -63,6 +64,33 @@ namespace ChessThem.ChessStuff
 			for (int i = 0; i < _board.GetLength(0); i++)
 				for (int j = 0; j < _board.GetLength(1); j++)
 					_board[i, j] = null;
+		}
+
+		public static List<BoardCellState> State
+		{
+			get
+			{
+				var state = new List<BoardCellState>(32);
+
+				for (int i = 0; i < _board.GetLength(0); i++)
+					for (int j = 0; j < _board.GetLength(1); j++)
+					{
+						var piece = _board[i, j];
+						if (piece != null)
+							state.Add(new BoardCellState
+							{
+								PieceColor = piece.Color.ToString(),
+								PieceType = piece.Type.ToString(),
+								Position = new Position
+								{
+									X = (XCoordinate)i,
+									Y = (YCoordinate)j
+								}
+							});
+					}
+
+				return state;
+			}
 		}
 	}
 }
