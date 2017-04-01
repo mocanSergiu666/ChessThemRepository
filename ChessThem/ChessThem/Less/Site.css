@@ -6,7 +6,7 @@
   position: fixed;
   bottom: 0px;
   width: 100%;
-  background-color: #0d102d;
+  background-color: #101f12;
   color: white;
 }
 #home-menu #greeting {
@@ -18,26 +18,20 @@
 }
 @media (min-width: 0px) {
   .chess-container {
-    width: 200px;
-    height: 200px;
-  }
-}
-@media (min-width: 768px) {
-  .chess-container {
-    width: 300px;
-    height: 300px;
-  }
-}
-@media (min-width: 992px) {
-  .chess-container {
     width: 400px;
     height: 400px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .chess-container {
     width: 500px;
     height: 500px;
+  }
+}
+@media (min-width: 992px) {
+  .chess-container {
+    width: 600px;
+    height: 600px;
   }
 }
 .chess-container .info {
@@ -127,33 +121,43 @@
   height: 100%;
 }
 .chat {
-  padding: 4px;
-  background-color: white;
+  padding: 10px;
+  background-color: black;
+  border: solid 1px white;
 }
-.chat .chat-heading {
-  color: #0d102d;
+.chat .chat-header {
+  color: white;
   text-align: center;
+  position: relative;
 }
-.chat .chat-messages {
+.chat .chat-header .chat-toggler {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+}
+.chat .chat-body {
+  margin-top: 10px;
+}
+.chat .chat-body .chat-messages {
   height: 300px;
   overflow-y: auto;
+  margin-bottom: 10px;
 }
-.chat .chat-messages .chat-message {
-  color: white;
-  background-color: #0d102d;
+.chat .chat-body .chat-messages .chat-message {
   word-wrap: break-word;
+  margin-top: 10px;
 }
-.chat .chat-input {
+.chat .chat-body .chat-messages .chat-message:first-of-type {
+  margin-top: 0px;
+}
+.chat .chat-body .chat-input {
   width: 100%;
-  border: 1px solid #0d102d;
   resize: vertical;
   max-height: 100px;
-  padding: 0px;
-  background-color: white;
-  color: #0d102d;
+  border: none;
 }
-.chat .chat-send {
-  background-color: #0d102d;
-  color: white;
-  border: 1px solid #0d102d;
+.chat .chat-body .chat-send {
+  margin: 0px;
+  width: 50%;
 }

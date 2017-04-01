@@ -1,4 +1,4 @@
-﻿@import "GlobalVariables.less";
+﻿@import "Keyframes.less";
 
 .container-fluid {
 	padding-top: 15px;
@@ -6,14 +6,25 @@
 
 .nav-pills > li {
 	float: none;
-	margin-bottom: 4px;
+	margin-bottom: 10px;
 
 	&.active {
 		> a {
-			background-color: @blue-color;
+			background-color: @black-color;
+			color: @light-grey-color;
+			border-color: @light-grey-color;
 
 			&:hover {
-				background-color: @violet-color;
+				background-color: @black-color;
+				color: @hover-light-grey-color;
+				border-color: @hover-light-grey-color;
+			}
+
+			&:focus {
+				background-color: @black-color;
+				color: @light-grey-color;
+				border-color: @light-grey-color;
+				animation: focused-active-li 0.1s forwards;
 			}
 		}
 	}
@@ -22,7 +33,9 @@
 		border-radius: 0px;
 		background-color: @black-color;
 		color: @white-color;
-		border: solid @micro-border-size @white-color;
+		border: @micro-border-size;
+		border-style: solid;
+		border-color: @white-color;
 		text-align: center;
 	}
 
@@ -33,11 +46,15 @@
 
 .nav > li > a {
 	&:hover {
-		background-color: @violet-color;
+		background-color: @black-color;
+		color: @hover-light-grey-color;
+		border-color: @hover-light-grey-color;
 	}
 
 	&:focus {
 		background-color: @black-color;
+		color: @light-grey-color;
+		border-color: @light-grey-color;
 	}
 }
 
@@ -53,11 +70,22 @@
 .form-control {
 	border-radius: 0px;
 	margin: 4px;
+
+	&:focus {
+		border-color: @pure-red-color;
+		animation: focused-form-control 0.1s forwards;
+	}
 }
 
 .radio label,
-.checkbox label {
-	color: @white-color;
+.checkbox {
+	input {
+		cursor: pointer;
+	}
+
+	label {
+		color: @white-color;
+	}
 }
 
 .btn {
@@ -65,10 +93,18 @@
 	border: solid @micro-border-size @black-color;
 	background-color: @white-color;
 	color: #555;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:active:focus {
+		outline: none;
+	}
 }
 
 .modal-content {
-	background-color: @red-color;
+	background-color: @dark-red-color;
 	border: @micro-border-size solid @white-color;
 	border-radius: 0px;
 }
@@ -87,8 +123,23 @@ button.close {
 
 .alert {
 	padding: 0px;
-	border: @micro-border-size solid @white-color;
 	border-radius: 0px;
-	margin-bottom: 4px;
-	background-color: @violet-color;
+	margin-bottom: 0px;
+	background-color: @dark-grey-color;
+	color: @white-color;
+}
+
+textarea {
+	padding: 0px;
+	background-color: @white-color;
+	color: @dark-grey-color;
+
+	&:focus {
+		animation: focused-textarea 0.1s forwards;
+		outline: none;
+	}
+}
+
+h3 {
+	margin: 0px;
 }

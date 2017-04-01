@@ -1,31 +1,62 @@
-﻿.container-fluid {
+﻿@keyframes focused-form-control {
+  100% {
+    box-shadow: 0px 0px 20px 5px #ff0000;
+  }
+}
+@keyframes focused-active-li {
+  100% {
+    box-shadow: 0px 0px 20px 5px #7c9077;
+  }
+}
+@keyframes focused-textarea {
+  100% {
+    box-shadow: 0px 0px 20px 5px #ff0000;
+  }
+}
+.container-fluid {
   padding-top: 15px;
 }
 .nav-pills > li {
   float: none;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
 }
 .nav-pills > li.active > a {
-  background-color: #337ab7;
+  background-color: black;
+  color: #7c9077;
+  border-color: #7c9077;
 }
 .nav-pills > li.active > a:hover {
-  background-color: #0d102d;
+  background-color: black;
+  color: #b2beaf;
+  border-color: #b2beaf;
+}
+.nav-pills > li.active > a:focus {
+  background-color: black;
+  color: #7c9077;
+  border-color: #7c9077;
+  animation: focused-active-li 0.1s forwards;
 }
 .nav-pills > li > a {
   border-radius: 0px;
   background-color: black;
   color: white;
-  border: solid 1px white;
+  border: 1px;
+  border-style: solid;
+  border-color: white;
   text-align: center;
 }
 .nav-pills > li + li {
   margin-left: 0px;
 }
 .nav > li > a:hover {
-  background-color: #0d102d;
+  background-color: black;
+  color: #b2beaf;
+  border-color: #b2beaf;
 }
 .nav > li > a:focus {
   background-color: black;
+  color: #7c9077;
+  border-color: #7c9077;
 }
 .container .jumbotron,
 .container-fluid .jumbotron {
@@ -38,7 +69,15 @@
   border-radius: 0px;
   margin: 4px;
 }
-.radio label,
+.form-control:focus {
+  border-color: #ff0000;
+  animation: focused-form-control 0.1s forwards;
+}
+.radio label input,
+.checkbox input {
+  cursor: pointer;
+}
+.radio label label,
 .checkbox label {
   color: white;
 }
@@ -47,6 +86,12 @@
   border: solid 1px black;
   background-color: white;
   color: #555;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:active:focus {
+  outline: none;
 }
 .modal-content {
   background-color: #801a1a;
@@ -65,8 +110,20 @@ button.close:focus {
 }
 .alert {
   padding: 0px;
-  border: 1px solid white;
   border-radius: 0px;
-  margin-bottom: 4px;
-  background-color: #0d102d;
+  margin-bottom: 0px;
+  background-color: #101f12;
+  color: white;
+}
+textarea {
+  padding: 0px;
+  background-color: white;
+  color: #101f12;
+}
+textarea:focus {
+  animation: focused-textarea 0.1s forwards;
+  outline: none;
+}
+h3 {
+  margin: 0px;
 }

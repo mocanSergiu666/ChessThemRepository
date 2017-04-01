@@ -2,10 +2,12 @@
 	Layout = null;
 }
 <div class="chat">
-	<h3 class="chat-heading">Chat</h3>
-	<div class="chat-messages">
-		@*<div class="alert chat-message" role="alert">User 1: Message 1</div>*@
+	<h3 class="chat-header">Chat<span class="chat-toggler glyphicon glyphicon-resize-small"></span></h3>
+	<div class="chat-body">
+		<div class="chat-messages">
+			@*<div class="alert chat-message" role="alert">User 1: Message 1</div>*@
+		</div>
+		<textarea maxlength="100" placeholder="Type messages here!" wrap="soft" class="chat-input"></textarea>
+		<button type="button" class="btn form-control chat-send">Send!</button>
 	</div>
-	<textarea maxlength="100" placeholder="Type messages here!" wrap="soft" class="chat-input"></textarea>
-	<button type="button" class="btn chat-send">Send!</button>
 </div>

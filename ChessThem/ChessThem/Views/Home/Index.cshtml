@@ -7,14 +7,14 @@
 		<div class="row">
 			<div class="col-xs-4">
 				<ul class="nav nav-pills center-block" role="tablist">
-					<li role="presentation" class="active"><a href="#go-anonymous" aria-controls="go-anonymous" role="tab" data-toggle="pill">Go anonymous</a></li>
+					<li role="presentation"><a href="#go-anonymous" aria-controls="go-anonymous" role="tab" data-toggle="pill">Go anonymous</a></li>
 					<li role="presentation"><a href="#log-in" aria-controls="log-in" role="tab" data-toggle="pill">Log in</a></li>
 					<li role="presentation"><a href="#sign-up" aria-controls="sign-up" role="tab" data-toggle="pill">Sign up</a></li>
 				</ul>
 			</div>
 			<div class="col-xs-8">
 				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane fade active in" id="go-anonymous">
+					<div role="tabpanel" class="tab-pane fade" id="go-anonymous">
 						<form class="form-inline" method="get" action="@Url.Action("Connect", "Game", new { ConnectionMode = "go-anonymous" })">
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="Username...">

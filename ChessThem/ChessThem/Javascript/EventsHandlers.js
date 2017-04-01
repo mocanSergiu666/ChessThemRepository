@@ -1,15 +1,37 @@
 ﻿function onHomeMenuSelectItem(event) {
 	event.preventDefault();
+
 	$(this).tab('show');
 }
 
 function onChatSend(event) {
 	event.preventDefault();
+
 	var message = $(".chat-input").val();
+
 	if (message != "") {
 		$(".chat-input").val("")
 		sendMessage(message);
 	}
+}
+
+function onChatToggle(event) {
+	var $toggler = $(this);
+
+	if ($toggler.hasClass("glyphicon-resize-small")) {
+		$(".chat-body").hide(100, function () {
+			$toggler.removeClass("glyphicon-resize-small");
+			$toggler.addClass("glyphicon-resize-full");
+
+		});
+	}
+	else
+		if ($toggler.hasClass("glyphicon-resize-full")) {
+			$(".chat-body").show(100, function () {
+				$toggler.removeClass("glyphicon-resize-full");
+				$toggler.addClass("glyphicon-resize-small");
+			});
+		}
 }
 
 function onStopDraggingChessPiece(event, ui) {

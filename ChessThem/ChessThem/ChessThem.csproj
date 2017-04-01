@@ -318,6 +318,8 @@
     </None>
     <Content Include="Less\Site.less" />
     <Content Include="Less\BootstrapOverrides.less" />
+    <Content Include="Less\Mixins.less" />
+    <Content Include="Less\Keyframes.less" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />

@@ -1,15 +1,16 @@
 ﻿@import "Variables.less";
+@import "Mixins.less";
 
 body {
-	color: white;
-	background-color: black;
+	color: @white-color;
+	background-color: @black-color;
 }
 
 #site-footer {
 	position: fixed;
 	bottom: 0px;
 	width: 100%;
-	background-color: @violet-color;
+	background-color: @dark-grey-color;
 	color: @white-color;
 }
 
@@ -26,23 +27,18 @@ body {
 
 .chess-container {
 	@media (min-width: @xs-limit) {
-		width: 200px;
-		height: 200px;
-	}
-
-	@media (min-width: @sm-limit) {
-		width: 300px;
-		height: 300px;
-	}
-
-	@media (min-width: @md-limit) {
 		width: 400px;
 		height: 400px;
 	}
 
-	@media (min-width: @lg-limit) {
+	@media (min-width: @sm-limit) {
 		width: 500px;
 		height: 500px;
+	}
+
+	@media (min-width: @md-limit) {
+		width: 600px;
+		height: 600px;
 	}
 
 	.info {
@@ -143,38 +139,51 @@ body {
 }
 
 .chat {
-	padding: 4px;
-	background-color: @white-color;
+	padding: 10px;
+	background-color: @black-color;
+	border: solid @micro-border-size @white-color;
 
-	.chat-heading {
-		color: @violet-color;
+	.chat-header {
+		color: @white-color;
 		text-align: center;
-	}
+		position: relative;
 
-	.chat-messages {
-		height: 300px;
-		overflow-y: auto;
-
-		.chat-message {
-			color: @white-color;
-			background-color: @violet-color;
-			word-wrap: break-word;
+		.chat-toggler {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			cursor: pointer;
 		}
 	}
 
-	.chat-input {
-		width: 100%;
-		border: @micro-border-size solid @violet-color;
-		resize: vertical;
-		max-height: 100px;
-		padding: 0px;
-		background-color: @white-color;
-		color: @violet-color;
-	}
+	.chat-body {
+		margin-top: 10px;
 
-	.chat-send {
-		background-color: #0d102d;
-		color: white;
-		border: @micro-border-size solid @violet-color;
+		.chat-messages {
+			height: 300px;
+			overflow-y: auto;
+			margin-bottom: 10px;
+
+			.chat-message {
+				word-wrap: break-word;
+				margin-top: 10px;
+
+				&:first-of-type {
+					margin-top: 0px;
+				}
+			}
+		}
+
+		.chat-input {
+			width: 100%;
+			resize: vertical;
+			max-height: 100px;
+			border: none;
+		}
+
+		.chat-send {
+			margin: 0px;
+			width: 50%;
+		}
 	}
 }
