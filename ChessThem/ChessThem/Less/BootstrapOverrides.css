@@ -1,6 +1,6 @@
 ﻿@keyframes focused-form-control {
   100% {
-    box-shadow: 0px 0px 20px 5px #ff0000;
+    box-shadow: 0px 0px 20px 5px #00ff00;
   }
 }
 @keyframes focused-active-li {
@@ -10,7 +10,7 @@
 }
 @keyframes focused-textarea {
   100% {
-    box-shadow: 0px 0px 20px 5px #ff0000;
+    box-shadow: 0px 0px 20px 5px #00ff00;
   }
 }
 .container-fluid {
@@ -70,7 +70,7 @@
   margin: 4px;
 }
 .form-control:focus {
-  border-color: #ff0000;
+  border-color: #00ff00;
   animation: focused-form-control 0.1s forwards;
 }
 .radio label input,
@@ -121,6 +121,7 @@ textarea {
   color: #101f12;
 }
 textarea:focus {
+  border-color: #00ff00;
   animation: focused-textarea 0.1s forwards;
   outline: none;
 }
